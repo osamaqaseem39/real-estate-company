@@ -1,0 +1,33 @@
+{
+  "name": "real-estate-project",
+  "version": "1.0.0",
+  "description": "Real Estate Management System with Next.js and NestJS",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:website\" \"npm run dev:dashboard\"",
+    "dev:server": "cd server && npm run start:dev",
+    "dev:website": "cd website && npm run dev",
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "build": "npm run build:server && npm run build:website && npm run build:dashboard",
+    "build:server": "cd server && npm run build",
+    "build:website": "cd website && npm run build",
+    "build:dashboard": "cd dashboard && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../website && npm install && cd ../dashboard && npm install",
+    "start": "concurrently \"npm run start:server\" \"npm run start:website\" \"npm run start:dashboard\"",
+    "start:server": "cd server && npm run start:prod",
+    "start:website": "cd website && npm run start",
+    "start:dashboard": "cd dashboard && npm run start",
+    "db:generate": "cd server && npm run prisma:generate",
+    "db:push": "cd server && npm run prisma:push",
+    "db:migrate": "cd server && npm run prisma:migrate",
+    "db:studio": "cd server && npm run prisma:studio"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "server",
+    "website",
+    "dashboard"
+  ]
+}
