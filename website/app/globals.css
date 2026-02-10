@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent;
+  }
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0,212,255,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+  }
+  
+  .neon-glow-purple {
+    box-shadow: 0 0 20px rgba(139,92,246,0.3);
+  }
+  
+  .neon-glow-green {
+    box-shadow: 0 0 20px rgba(16,185,129,0.3);
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  }
+}
+
