@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-spartan)', 'sans-serif'],
+      },
       colors: {
         'neon-blue': '#00D4FF',
         'neon-purple': '#8B5CF6',
@@ -14,6 +17,8 @@ module.exports = {
         'neon-pink': '#EC4899',
         'neon-orange': '#F59E0B',
         'neon-cyan': '#06B6D4',
+        'teal': '#14B8A6',
+        'light-green': '#86EFAC',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

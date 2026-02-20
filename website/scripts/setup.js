@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Setting up Future Real Estate Website...\n');
+console.log('🚀 Setting up GT Estate Website...\n');
 
 // Create .env.local if it doesn't exist
 const envPath = path.join(__dirname, '..', '.env.local');

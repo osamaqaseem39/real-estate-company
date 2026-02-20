@@ -13,15 +13,13 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <QuickSearch />
-      <FeaturedProperties />
-      <StatsSection />
-      <TechFeatures />
-      <AboutPreview />
-      <Testimonials />
-      <NewsPreview />
-      <CTA />
-      <Footer />
+      {/* Spacer so page can scroll; content below scrolls under the fixed hero (z-30 < hero z-40) */}
+      {/* Spacer matches Hero's max scroll range: heroHeight * 1.5 = 150vh */}
+      <div className="h-[150vh]" aria-hidden />
+      <div className="relative z-30">
+        <QuickSearch />
+        <Footer />
+      </div>
     </main>
   )
 }

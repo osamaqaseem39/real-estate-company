@@ -1,4 +1,4 @@
-# Future Real Estate Website
+# GT Estate Website
 
 A modern, next-generation real estate website built with Next.js 14, featuring AI-powered property matching, virtual reality tours, and smart home integration.
 
@@ -135,5 +135,5 @@ This project is licensed under the MIT License.
 
 ## Support
 
-For support and questions, please contact us at info@futurerealestate.com
+For support and questions, please contact us at info@gtestate.com
 

@@ -61,7 +61,7 @@ export default function Footer() {
       <div className="absolute inset-0 cyber-grid opacity-10" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-blue to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -76,7 +76,7 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center">
                   <Home className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-white">Future Real Estate</span>
+                <span className="text-xl font-bold text-white">GT Estate</span>
               </div>
               
               <p className="text-white/60 mb-6 max-w-md">
@@ -92,11 +92,11 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3 text-white/60">
                   <Mail className="w-4 h-4 text-neon-blue" />
-                  <span>info@futurerealestate.com</span>
+                  <span>info@gtestate.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-white/60">
                   <MapPin className="w-4 h-4 text-neon-blue" />
-                  <span>123 Future Street, Tech City, TC 12345</span>
+                  <span>Lahore, Pakistan</span>
                 </div>
               </div>
             </motion.div>
@@ -205,7 +205,7 @@ export default function Footer() {
           className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <div className="text-white/60 text-sm">
-            © 2024 Future Real Estate. All rights reserved.
+            © 2024 GT Estate. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">

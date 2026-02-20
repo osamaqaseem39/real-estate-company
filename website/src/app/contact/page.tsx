@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Future Real Estate',
+  title: 'Contact Us - GT Estate',
   description: 'Get in touch with our team for personalized real estate assistance and support.',
 }
 
@@ -13,7 +13,7 @@ export default function Contact() {
         {/* Background Effects */}
         <div className="absolute inset-0 cyber-grid opacity-20" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
@@ -108,7 +108,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Email</h4>
-                      <p className="text-white/60">info@futurerealestate.com</p>
+                      <p className="text-white/60">info@gtestate.com</p>
                       <p className="text-white/60">We'll respond within 24 hours</p>
                     </div>
                   </div>
@@ -119,8 +119,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Office</h4>
-                      <p className="text-white/60">123 Future Street</p>
-                      <p className="text-white/60">Tech City, TC 12345</p>
+                      <p className="text-white/60">Lahore</p>
+                      <p className="text-white/60">Pakistan</p>
                     </div>
                   </div>
                 </div>

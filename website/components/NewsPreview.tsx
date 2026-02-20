@@ -11,6 +11,15 @@ import {
   Building
 } from 'lucide-react'
 
+// Helper function to format date consistently (avoiding hydration errors)
+function formatDate(dateString: string): string {
+  const date = new Date(dateString)
+  const month = (date.getMonth() + 1).toString().padStart(2, '0')
+  const day = date.getDate().toString().padStart(2, '0')
+  const year = date.getFullYear()
+  return `${month}/${day}/${year}`
+}
+
 export default function NewsPreview() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -65,7 +74,7 @@ export default function NewsPreview() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-pink/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -159,7 +168,7 @@ export default function NewsPreview() {
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
-                        <span>{new Date(article.date).toLocaleDateString()}</span>
+                        <span>{formatDate(article.date)}</span>
                       </div>
                       <span>{article.readTime}</span>
                     </div>

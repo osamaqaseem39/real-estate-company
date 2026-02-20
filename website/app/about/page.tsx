@@ -3,7 +3,7 @@ import Hero from '@/components/Hero'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'About Us - Future Real Estate',
+  title: 'About Us - GT Estate',
   description: 'Learn about our mission to revolutionize real estate with cutting-edge technology and exceptional service.',
 }
 
@@ -15,14 +15,14 @@ export default function About() {
         <div className="absolute inset-0 cyber-grid opacity-20" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-blue to-transparent" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
           <div className="min-h-screen flex items-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Content */}
               <div>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full text-neon-blue text-sm font-medium mb-4">
-                    About Future Real Estate
+                    About GT Estate
                   </span>
                 </div>
 
@@ -31,7 +31,7 @@ export default function About() {
                 </h1>
 
                 <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                  Founded in 2024, Future Real Estate is at the forefront of the digital transformation 
+                  Founded in 2024, GT Estate is at the forefront of the digital transformation 
                   in the real estate industry. We combine artificial intelligence, virtual reality, 
                   and blockchain technology to create an unparalleled property buying and selling experience.
                 </p>

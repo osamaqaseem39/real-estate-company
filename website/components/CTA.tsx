@@ -44,7 +44,7 @@ export default function CTA() {
         className="absolute bottom-20 right-20 w-40 h-40 bg-neon-purple/10 rounded-full blur-2xl"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <motion.div
