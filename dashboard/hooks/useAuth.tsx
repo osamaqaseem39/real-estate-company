@@ -1,13 +1,14 @@
  'use client'
 
- import React, {
-   useState,
-   useEffect,
-   createContext,
-   useContext,
-   type ReactNode,
- } from 'react'
- import { api } from '@/lib/api'
+import React, {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  type ReactNode,
+} from 'react'
+import type { AxiosResponse } from 'axios'
+import { api } from '@/lib/api'
  
  interface User {
    id: string
@@ -23,20 +24,20 @@
    logout: () => void
  }
  
- const AuthContext = createContext<AuthContextType | undefined>(undefined)
- 
- export function AuthProvider({ children }: { children: ReactNode }) {
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
+
+export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
    const [user, setUser] = useState<User | null>(null)
    const [loading, setLoading] = useState(true)
  
    useEffect(() => {
      const token = localStorage.getItem('auth_token')
-     if (token) {
-       api
-         .get('/auth/profile')
-         .then((response) => {
-           setUser(response.data)
-         })
+    if (token) {
+      api
+        .get<User>('/auth/profile')
+        .then((response: AxiosResponse<User>) => {
+          setUser(response.data)
+        })
          .catch(() => {
            localStorage.removeItem('auth_token')
          })
@@ -61,12 +62,12 @@
      setUser(null)
    }
  
-   return (
-     <AuthContext.Provider value={{ user, loading, login, logout }}>
-       {children}
-     </AuthContext.Provider>
-   )
- }
+  return (
+    <AuthContext.Provider value={{ user, loading, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  )
+}
  
  export function useAuth() {
    const context = useContext(AuthContext)
