@@ -123,7 +123,9 @@ export default function GalleryPage() {
       return matchesSearch && matchesCategory
     }) || []
 
-  const categories = [...new Set(gallery?.map((item: any) => item.category) || [])]
+  const categories: string[] = [
+    ...new Set<string>(gallery?.map((item: any) => String(item.category)) || []),
+  ]
 
   return (
     <div className="space-y-6">
